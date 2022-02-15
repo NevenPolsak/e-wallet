@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@media only screen and (max-width: 68.75em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+header {
+  color: white;
+  padding: 1rem 2rem;
+  min-height: 30vh;
+}
+
+header.green {
+  background-color: #28b485;
+}
+
+header.red {
+  background-color: #b42828f5;
+}
+
+header .eLogo {
+  display: flex;
+}
+
+header .eLogo img {
+  height: 50px;
+  width: 50px;
+  margin: 10px;
+  margin-right: 13px;
+  opacity: 0.95;
+}
+
+header .eLogo h1 {
+  display: inline;
+  color: white;
+  font-size: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.balance {
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+  .balance {
+    margin-bottom: 1.3rem;
+  }
+}
+
+.balance-heading {
+  font-size: 1.8rem;
+}
+
+.balance-amount {
+  font-size: 4rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.income-expense {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 350px) {
+  .income-expense {
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+}
+
+.income-expense .income,
+.income-expense .expense {
+  margin: 1rem;
+  background: white;
+  height: 12rem;
+  width: 23rem;
+  text-align: center;
+  color: gray;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 350px) {
+  .income-expense .income,
+  .income-expense .expense {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+.income-expense .income-amount {
+  font-size: 3rem;
+  color: #10be67;
+  font-weight: bolder;
+}
+
+.income-expense .expense-amount {
+  font-size: 3rem;
+  color: #e84545;
+  font-weight: bolder;
+}
+
+.income-expense .income-heading,
+.income-expense .expense-heading {
+  font-size: 1.6rem;
+}
+
+.add {
+  padding: 14px;
+  border-bottom: 1px solid orangered;
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+}
+.add-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media (max-width: 350px) {
+  .add-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+.add-description,.add-type,
+.add-value {
+  border: 1px solid #e7e7e7;
+  background-color: #fff;
+  color: inherit;
+  font-family: inherit;
+  font-size: 14px;
+  padding: 12px 15px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.add-description {
+  width: 100%;
+}
+
+.add-value {
+  width: 10.5rem;
+}
+
+@media (max-width: 350px) {
+  .add-value {
+    width: 100%;
+  }
+}
+
+.add-type:focus,
+.add-description:focus,
+.add-value:focus {
+  outline: none;
+  border: 1px solid #28b485;
+}
+
+.add-btn{
+  font-size: 3.5rem;
+  background: none;
+  border:none;
+  color: #28b485;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.1;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-btn:active{
+  transform: translateY(4px);
+  color: #1c8a65;
+}
+
+.collection{
+  padding: 10px;
+  max-width: 1000px;
+  margin: 2vw auto;
+  border: 1px solid #fff7f7;
+  box-shadow:0px 2px 10px #dbd9d9;
+  border-radius: 13px;
+}
+
+.item{
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item:not(:last-child) {
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.item .item-description-time .item-description {
+  font-size: 2rem;
+  padding-bottom: 0.5rem;
+  color: #393e46;
+  font-weight: bold;
+}
+
+.item .item-description-time .item-time {
+  font-size: 1.5rem;
+  color: gray;
+}
+
+.item .item-amount {
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  padding: 1rem 2rem 1rem 1rem;
+  align-self: center;
+  font-weight: bolder;
+}
+
+.item .item-amount.income-amount {
+  color: #10be67;
+}
+
+.item .item-amount.expense-amount {
+  color: #c70039;
+}
+
+/*LOADER************************************************/
+
+.loader {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.loader svg {
+  height: 5.5rem;
+  width: 5.5rem;
+  fill: #10be67;
+  -webkit-transform-origin: 44% 50%;
+      -ms-transform-origin: 44% 50%;
+       -o-transform-origin: 44% 50%;
+          transform-origin: 44% 50%;
+  -webkit-animation: rotate 1.5s infinite linear;
+       -o-animation: rotate 1.5s infinite linear;
+          animation: rotate 1.5s infinite linear;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+       -o-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-o-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0);
+    -o-transform: rotate(0);
+       transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+       transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0);
+    -o-transform: rotate(0);
+       transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+       transform: rotate(360deg);
+  }
+}

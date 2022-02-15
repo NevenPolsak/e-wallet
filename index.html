@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Wallet</title>
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div>
+      <header class="green">
+        <div class="eLogo">
+          <img src="./SeekPng.com_wallet-png_1044074.png" alt="logo" />
+          <h1>eWallet</h1>
+        </div>
+
+        <div class="balance">
+          <div class="balance-heading">
+            <p>Total balance</p>
+          </div>
+          <div class="balance-amount">
+            <p>0</p>
+          </div>
+        </div>
+
+        <div class="income-expense">
+          <div class="income">
+            <div class="income-amount">
+              <p>$0</p>
+            </div>
+            <div class="income-heading">
+              <p>Incomes</p>
+            </div>
+          </div>
+          <div class="expense">
+            <div class="expense-amount">
+              <p>$0</p>
+            </div>
+            <div class="expense-heading">
+              <p>Expenses</p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="add">
+        <form id="ewallet-form">
+          <div class="add-container">
+            <select class="add-type">
+              <option value="+" selected>+</option>
+              <option value="-">-</option>
+            </select>
+      
+            <input
+              type="text"
+              class="add-description"
+              placeholder="Add description"
+            />
+            <input type="number" class="add-value" placeholder="Value" />
+            <button class="add-btn">
+              <i class="fa-solid fa-circle-check"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+
+      
+      <div class="collection">
+        <!--
+        <div class="item">
+          <div class="item-description-time">
+            <div class="item-description">
+              <p>Buy a physics book</p>
+            </div>
+            <div class="item-time">
+              <p>25 Feb, 06:45 PM</p>
+            </div>
+          </div>
+          <div class="item-amount expense-amount">
+            <p>-$78</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-description-time">
+            <div class="item-description">
+              <p>Salary</p>
+            </div>
+            <div class="item-time">
+              <p>24 Feb, 09:45 AM</p>
+            </div>
+          </div>
+          <div class="item-amount income-amount">
+            <p>+$1000</p>
+          </div>
+        </div>
+      -->
+      </div>
+    </div>
+    </div>
+<script src="./index.js"></script>
+  </body>
+</html>
